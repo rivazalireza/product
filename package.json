@@ -1,9 +1,8 @@
 {
-  "name": "hr",
+  "name": "productikd",
   "version": "4.4.0",
   "description": "سیستم تولید",
   "homepage": "https://rivazalireza.github.io/productikd",
-  "private": true,
   "bugs": {
     "url": "https://github.com/coreui/coreui-free-react-admin-template/issues"
   },
@@ -23,8 +22,8 @@
     "test": "react-scripts test",
     "test:cov": "npm test -- --coverage --watchAll=false",
     "test:debug": "react-scripts --inspect-brk test --runInBand",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build"
   },
   "dependencies": {
     "@coreui/chartjs": "^3.0.0",
