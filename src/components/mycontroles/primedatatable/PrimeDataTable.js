@@ -190,7 +190,7 @@ const PrimeDataTable = ({responsiveLayout,onRelaod,headerColor,paginator,firstTe
         />)}
         <DataTable 
             paginatorTemplate={MyPaginatorTemplate}
-            responsiveLayout={multiSelect?'scroll': responsiveLayout?responsiveLayout:'stack'}
+            responsiveLayout={multiSelect?'scroll': responsiveLayout?responsiveLayout:'scroll'}
             rows={lazyParams.rows}
             header={headerTemplate}
             value={rows}

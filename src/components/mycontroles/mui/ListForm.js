@@ -2,11 +2,7 @@ import React, { useState  } from 'react';
 import { ConfirmDialog, confirmDialog } from 'primereact/confirmdialog';
 import { ReactNotifications } from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css'
-
 import {  useQuery } from '@tanstack/react-query'
-import Backdrop from '@mui/material/Backdrop';
-import CircularProgress from '@mui/material/CircularProgress';
-
 import PrimeDataTable from 'src/components/mycontroles/primedatatable/PrimeDataTable';
 import CIcon from '@coreui/icons-react';
 import { cilCheck } from '@coreui/icons';
@@ -30,6 +26,7 @@ function ListForm({listInfo,firstFilter,handleSelect,handleClose,handleSuccess,a
 	{
 		onSuccess,
         refetchOnWindowFocus:false,
+        cacheTime:listInfo.cacheTime?listInfo.cacheTime:5000*60,
     
 	})
     const onRelaod=()=>{
@@ -93,7 +90,6 @@ function ListForm({listInfo,firstFilter,handleSelect,handleClose,handleSuccess,a
          <React.Fragment>
             <ReactNotifications />
             <ConfirmDialog />
-            
            <PrimeDataTable 
             {...rest}
             menuModel={menuModel}
@@ -108,7 +104,7 @@ function ListForm({listInfo,firstFilter,handleSelect,handleClose,handleSuccess,a
             handleClose={handleClose}
             setLazyParams={setLazyParams}
             lazyParams={lazyParams} 
-            loading={isLoading}
+            loading={isLoading | downloding}
             value={masterData.rows} 
             totalRecords={masterData.totalRecords} 
             filterDisplay="row" 
@@ -117,7 +113,7 @@ function ListForm({listInfo,firstFilter,handleSelect,handleClose,handleSuccess,a
             onRelaod={onRelaod}
             resizableColumns={listInfo.resizableColumns===undefined? true:listInfo.resizableColumns }
             />
-             {downloding  ? (<CircularProgress color="inherit" size={40} />) : null}
+             
         </React.Fragment>
     )
 }
