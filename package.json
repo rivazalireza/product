@@ -1,8 +1,9 @@
 {
-  "name": "product",
+  "name": "hr",
   "version": "4.4.0",
   "description": "سیستم تولید",
   "homepage": "https://rivazalireza.github.io/product",
+  "private": true,
   "bugs": {
     "url": "https://github.com/coreui/coreui-free-react-admin-template/issues"
   },
