@@ -1,0 +1,101 @@
+/* inspired by: https://css-tricks.com/responsive-data-tables/ */
+.responsiveTable {
+  width: 100%;
+}
+
+.responsiveTable td .tdBefore {
+  display: none;
+}
+
+@media screen and (max-width: 40em) {
+  /*
+    Force table elements to not behave like tables anymore
+    Hide table headers (but not display: none;, for accessibility)
+  */
+
+  .responsiveTable table,
+  .responsiveTable thead,
+  .responsiveTable tbody,
+  .responsiveTable th,
+  .responsiveTable td,
+  .responsiveTable tr {
+    display: block;
+  }
+
+  .responsiveTable thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    border-bottom: 2px solid #333;
+  }
+
+  .responsiveTable tbody tr {
+    border: 1px solid #000;
+    padding: .25em;
+  }
+
+  .responsiveTable td.pivoted {
+    /* Behave like a "row" */
+    border: none !important;
+    position: relative;
+    padding-right: calc(50% ) !important;
+    text-align: right !important;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+  }
+
+  .responsiveTable td .tdBefore {
+    /* Now like a table header */
+    position: absolute;
+    display: block;
+
+    /* Top/left values mimic padding */
+    right: 1rem;
+    width: calc(50% - 20px);
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    text-align: right !important;
+    font-weight: 600;
+  }
+}
+
+/* ************************************* */
+.rowselected td {
+  background-color: hsl(189, 84%, 83%);
+  font-weight: bold;
+  }
+  
+.fancyTable {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ background-color: white; 
+}
+
+.fancyTable th {
+font-size: 12px;
+}
+
+.fancyTable tbody tr td {
+color: #262c31;
+padding: 5px;
+}
+
+.fancyTable tbody tr:nth-child(odd) {
+    background-color: #fcfcfc;
+} 
+.fancyTable tbody tr:hover {
+    background-color: #ddf1fa;
+    color: black;
+}
+.fancyTable tbody tr td {
+font-size: 12px;
+padding: .50em;
+} 
+
+.fancyTable thead tr th,
+.fancyTable thead tr td,
+.fancyTable tfoot tr th,
+.fancyTable tfoot tr td {
+background-color: #476d9f;
+color: white;
+font-size: 12px;
+}

@@ -1,0 +1,28 @@
+
+#html5-qrcode-button-camera-permission {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 6px 16px;
+    font-size: 16px;
+    /* margin: 4px 2px; */
+    
+  }
+
+#html5-qrcode-button-camera-permission {
+    text-indent: -9999px;
+    line-height: 0; /* Collapse the original line */
+  }
+  
+  #html5-qrcode-button-camera-permission::after {
+    content: "درخواست مجوز دوربین";
+    text-indent: 0;
+    display: block;
+    line-height: initial; /* New content takes up original line height */
+    
+  }
+
+
+  /* #html5-qrcode-anchor-scan-type-change {
+    display: none;
+  } */
+  

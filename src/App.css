@@ -1,0 +1,41 @@
+
+  @font-face {
+    font-family: 'Vazir';
+    src: local('Vazir'), url(./fonts/Vazir.woff) format('woff');
+    /* other formats include: 'woff2', 'truetype, 'opentype',
+                              'embedded-opentype', and 'svg' */
+  }
+
+  
+input ,textarea ,p, div, td ,th  , li,label , .ui-paginator-current ,.ui-overlaypanel-content,.user-name,
+.p-dropdown-label,.p-paginator-page , .app-footer , h3 {
+    font-family: 'vazir','sahel' !important;
+    font-size: 0.87rem !important;
+    /* color: rgb(15, 15, 15); */
+}
+  
+body{
+  font-family: 'Vazir'  !important;
+}
+
+li , input,div,label{
+  font-family: 'Vazir' !important;
+}
+
+.muirtl-ahj2mt-MuiTypography-root {
+  font-family: 'Vazir' !important;
+}
+/* .muirtl-1auycx3-MuiAutocomplete-root .MuiOutlinedInput-root.MuiInputBase-sizeSmall .MuiAutocomplete-input{
+  font-family: 'Vazir' !important; 
+} */
+
+.container-xl, .container-lg, .container-md, .container-sm, .container {
+  max-width:  100% !important;
+}
+
+
+.MuiFormLabel-asterisk{
+  color: red !important;
+  forced-color-adjust: red !important;
+}
+
